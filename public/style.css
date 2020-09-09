@@ -130,6 +130,8 @@ body {
 
 
 }
+
+
 .input_course::-webkit-input-placeholder {
     color: rgba(39, 35, 35, 0.685);
     font-family: var(--font-display-3);
@@ -223,6 +225,11 @@ body {
         width: 14rem;
         font-size: 1.4rem;
     }
+    .form {
+        width: 100%;
+        justify-content: space-between;
+        margin: auto;
+    }
 }
 .button {
 width: 6rem;
@@ -306,6 +313,10 @@ border: none;
     list-style: none;
     transition: all .5s;
    
+}
+
+@media (max-width: 26.56em) {
+    
 }
 .corse_code,
 .units {
