@@ -189,6 +189,7 @@ var appController = (function () {
 
   //Event listener
   btn.addEventListener("click", function (e) {
+    e.preventDefault();
     uIController.displayValue();
     uIController.displayVariousGPBoard();
 
@@ -416,6 +417,11 @@ var claculateGP = (function () {
           "click",
           claculateGP.sumAll(reduced1, reduced2, reduced3)
         );
+      document
+        .querySelector(".btn_submit")
+        .addEventListener("click", function (event) {
+          event.preventDefault();
+        });
 
       claculateGP.displayUnits(reduced2, reduced3);
       return {

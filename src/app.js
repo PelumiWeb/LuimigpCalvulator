@@ -4,10 +4,12 @@ const app = express();
 
 const port = process.env.PORT || 3030;
 app.set("view engine", "ejs");
-// const publicDirectlyPath = path.join(__dirname, "../public");
 app.use(express.static("public"));
-
-// app.use(express.static(publicDirectlyPath));
+app.get("/", (req, res) => {
+  res.render("index", {
+    name: "Pelumi",
+  });
+});
 
 app.listen(port, () => {
   console.log(`app is running in port ${port}`);
